@@ -48,4 +48,16 @@ public partial class Cart : System.Web.UI.Page
             }
         }
     }
+    protected void btnCheckOut_Click(object sender, EventArgs e)
+    {
+        lblMessage.Text = "Sorry not yet";
+    }
+    protected void btnEmpty_Click(object sender, EventArgs e)
+    {
+        if(cart.Count > 0)
+        {
+            cart.Clear();
+            lstCart.Items.Clear();
+        }
+    }
 }
